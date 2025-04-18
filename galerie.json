@@ -1,6 +1,10 @@
 {
     "aurore": [
         {
+            "src": "PHOTO-SITE-ASTRO/aurore/20240510_221435.mp4",
+            "title": ""
+        },
+        {
             "src": "PHOTO-SITE-ASTRO/aurore/Image01.webp",
             "title": ""
         },
@@ -322,5 +326,6 @@
             "src": "PHOTO-SITE-ASTRO/SOLEIL/soleil.webp",
             "title": ""
         }
-    ]
+    ],
+    "eclipse solaire": []
 }
