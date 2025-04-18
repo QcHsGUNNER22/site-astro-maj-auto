@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Galerie aurore boreale</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="pro.css">
+        <link rel="stylesheet" href="lightbox2-2.11.5/dist/css/lightbox.min.css">
+        <script src="lightbox2-2.11.5/dist/js/lightbox-plus-jquery.min.js"></script>
+    </head>
+    <body>
+
+
+
+
+
+            <!--HEADER-->
+        <div class="portfolio-header">
+            <div class="texte-ligne-vertical" style="margin-left: 16px; margin-top: 20px;">
+                <p>Olivier Tailly</p>
+            </div>
+
+            <a class="contact-button" style="position: absolute; right: 20px; top: 18px;" href="mailto: oliviertailly@hotmail.com"> Me contacter</a>
+        </div>
+
+
+
+
+
+
+            <!-- SECTION GRISE TITRE-->
+
+        <div class="section portfolio section-grise1">
+            <a href="index.html">ACCEUIL</a>
+            <div class="separateur" style="margin-top: -15px;" ></div>
+            <h1>GALERIE</h1>
+            <h2>Aurore boreal</h2>
+        </div>
+
+
+
+
+            <!--SECTION BLANCHE CONTENUE-->
+
+        <div class="section" style="text-align: center; padding-top: 0px;">
+            <div class="texte-ligne-vertical" style="text-align: center; ">
+                <p>
+                    Une gigantesque <a style="color: rgb(7, 7, 102);" href="https://fr.wikipedia.org/wiki/%C3%89jection_de_masse_coronale" target="_blank">ejection de masse coronale</a> m'a donner l'occasion de voir des aurores boreal lors d'une de mes toute premiere sortie.
+                </p>
+            </div>
+        </div>
+
+
+
+        <div id="galerie-aurore" class="galerie">
+            <h1>AURORE BOREAL</h1>
+
+            <script>
+                  fetch('galerie.json')
+                    .then(response => response.json())
+                    .then(data => {
+                      const galerie = data["aurore"];
+                      const container = document.getElementById("galerie-aurore");
+
+                      galerie.forEach(item => {
+                        const link = document.createElement("a");
+                        link.href = item.src;
+                        link.setAttribute("data-lightbox", "aurore");
+                        link.setAttribute("data-title", item.title);
+
+                        const img = document.createElement("img");
+                        img.src = item.src;
+                        img.alt = item.title;
+                        img.loading = "lazy";
+
+                        link.appendChild(img);
+                        container.appendChild(link);
+                      });
+                    })
+                    .catch(error => console.error("Erreur de chargement des images :", error));
+            </script>
+
+
+        </div>
+
+
+
+
+
+
+        <!--FRAME-->
+
+        <div class="section">
+            <iframe src="contect-frame.html" scrolling="no"/>
+        </div>
+
+
+
+        <script src="lightbox2-2.11.5/dist/js/lightbox.js"></script>
+    </body>
+</html>

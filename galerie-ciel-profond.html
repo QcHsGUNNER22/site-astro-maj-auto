@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Galerie ciel-profond</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="pro.css">
+        <link rel="stylesheet" href="lightbox2-2.11.5/dist/css/lightbox.min.css">
+        <script src="lightbox2-2.11.5/dist/js/lightbox-plus-jquery.min.js"></script>
+    </head>
+    <body>
+
+
+
+
+
+            <!--HEADER-->
+        <div class="portfolio-header">
+            <div class="texte-ligne-vertical" style="margin-left: 16px; margin-top: 20px;">
+                <p>Olivier Tailly</p>
+            </div>
+
+            <a class="contact-button" style="position: absolute; right: 20px; top: 18px;" href="mailto:oliviertailly@hotmail.com"> Me contacter</a>
+        </div>
+
+
+
+
+
+
+            <!-- SECTION GRISE TITRE-->
+
+        <div class="section portfolio section-grise1">
+            <a href="index.html">ACCEUIL</a>
+            <div class="separateur" style="margin-top: -15px;" ></div>
+            <h1>GALERIE</h1>
+            <h2>Ciel-profond</h2>
+        </div>
+
+
+
+
+            <!--SECTION BLANCHE CONTENUE-->
+
+        <div class="section" style="text-align: center; padding-top: 0px;">
+            <div class="texte-ligne-vertical" style="text-align: center; ">
+                <p>
+                    Ici vous aller retrouver tout mes photos du ciel profond. <br> Nebuleuse,Galaxies,Amas d'etoiles.
+                </p>
+            </div>
+        </div>
+
+
+
+        <div id="galerie-ciel-profond" class="galerie">
+            <h1>M42 Nebuleuse d'orion</h1>
+
+            <script>
+              fetch('galerie.json')
+                .then(response => response.json())
+                .then(data => {
+                  const galerie = data["CIEL PROFOND"];
+                  const container = document.getElementById("galerie-ciel-profond");
+
+                  galerie.forEach(item => {
+                    const link = document.createElement("a");
+                    link.href = item.src;
+                    link.setAttribute("data-lightbox", "ciel-profpnd");
+                    link.setAttribute("data-title", item.title);
+
+                    const img = document.createElement("img");
+                    img.src = item.src;
+                    img.alt = item.title;
+                    img.loading = "lazy";
+
+                    link.appendChild(img);
+                    container.appendChild(link);
+                  });
+                })
+                .catch(error => console.error("Erreur de chargement des images :", error));
+            </script>
+
+
+
+        </div>
+
+        <!--FRAME-->
+
+        <div class="section">
+            <iframe src="contect-frame.html" scrolling="no"/>
+        </div>
+
+
+
+        <script src="lightbox2-2.11.5/dist/js/lightbox.js"></script>
+    </body>
+</html>
