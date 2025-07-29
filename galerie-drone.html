@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Galerie eclipse solaire</title>
+        <title>Galerie drone</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="pro.css">
@@ -34,7 +34,7 @@
             <a href="index.html">ACCEUIL</a>
             <div class="separateur" style="margin-top: -15px;" ></div>
             <h1>GALERIE</h1>
-            <h2> Photo eclipse solaire</h2>
+            <h2> video de drone</h2>
         </div>
 
 
@@ -52,20 +52,20 @@
 
 
 
-        <div id="eclipse" class="galerie">
-            <h1>eclipse</h1>
+        <div id="drone" class="galerie">
+            <h1>drone</h1>
 
             <script>
               fetch('galerie.json')
                 .then(response => response.json())
                 .then(data => {
-                  const galerie = data["eclipse solaire"];
-                  const container = document.getElementById("eclipse");
+                  const galerie = data["drone"];
+                  const container = document.getElementById("drone");
 
                   galerie.forEach(item => {
                     const link = document.createElement("a");
                     link.href = item.src;
-                    link.setAttribute("data-lightbox", "eclipse-solaire");
+                    link.setAttribute("data-lightbox", "drone");
                     link.setAttribute("data-title", item.title);
 
                     const img = document.createElement("img");

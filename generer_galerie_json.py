@@ -10,6 +10,7 @@ galeries = {
     "PLANETES": [],
     "SOLEIL": [],
     "eclipse solaire": [],
+    "drone": [],
 }
 
 for galerie in galeries:
