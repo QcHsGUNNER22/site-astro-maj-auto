@@ -193,17 +193,17 @@
             "title": ""
         }
     ],
-    "CIEL PROFOND": [
+    "m51": [
         {
-            "src": "PHOTO-SITE-ASTRO/CIEL PROFOND/M-42-orion (1).webp",
+            "src": "PHOTO-SITE-ASTRO/m51/M-42-orion (1).webp",
             "title": ""
         },
         {
-            "src": "PHOTO-SITE-ASTRO/CIEL PROFOND/M-42-orion (2).webp",
+            "src": "PHOTO-SITE-ASTRO/m51/M-42-orion (2).webp",
             "title": ""
         },
         {
-            "src": "PHOTO-SITE-ASTRO/CIEL PROFOND/M-42-orion (3).webp",
+            "src": "PHOTO-SITE-ASTRO/m51/M-42-orion (3).webp",
             "title": ""
         }
     ],
@@ -516,6 +516,26 @@
     "drone": [
         {
             "src": "PHOTO-SITE-ASTRO/drone/Timeline 1.mp4",
+            "title": ""
+        }
+    ],
+    "galaxie du tourbillion": [
+        {
+            "src": "PHOTO-SITE-ASTRO/galaxie du tourbillion/m51 test.jpg",
+            "title": ""
+        },
+        {
+            "src": "PHOTO-SITE-ASTRO/galaxie du tourbillion/m51.jpg",
+            "title": ""
+        }
+    ],
+    "andromede": [
+        {
+            "src": "PHOTO-SITE-ASTRO/andromede/andromede.jpg",
+            "title": ""
+        },
+        {
+            "src": "PHOTO-SITE-ASTRO/andromede/m31.jpg",
             "title": ""
         }
     ]

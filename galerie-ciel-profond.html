@@ -59,8 +59,74 @@
               fetch('galerie.json')
                 .then(response => response.json())
                 .then(data => {
-                  const galerie = data["CIEL PROFOND"];
+                  const galerie = data["m51"];
                   const container = document.getElementById("galerie-ciel-profond");
+
+                  galerie.forEach(item => {
+                    const link = document.createElement("a");
+                    link.href = item.src;
+                    link.setAttribute("data-lightbox", "ciel-profpnd");
+                    link.setAttribute("data-title", item.title);
+
+                    const img = document.createElement("img");
+                    img.src = item.src;
+                    img.alt = item.title;
+                    img.loading = "lazy";
+
+                    link.appendChild(img);
+                    container.appendChild(link);
+                  });
+                })
+                .catch(error => console.error("Erreur de chargement des images :", error));
+            </script>
+
+
+
+        </div>
+
+                <div id="galerie-m51" class="galerie">
+            <h1>galaxie du tourbillion</h1>
+
+            <script>
+              fetch('galerie.json')
+                .then(response => response.json())
+                .then(data => {
+                  const galerie = data["galaxie du tourbillion"];
+                  const container = document.getElementById("galerie-m51");
+
+                  galerie.forEach(item => {
+                    const link = document.createElement("a");
+                    link.href = item.src;
+                    link.setAttribute("data-lightbox", "ciel-profpnd");
+                    link.setAttribute("data-title", item.title);
+
+                    const img = document.createElement("img");
+                    img.src = item.src;
+                    img.alt = item.title;
+                    img.loading = "lazy";
+
+                    link.appendChild(img);
+                    container.appendChild(link);
+                  });
+                })
+                .catch(error => console.error("Erreur de chargement des images :", error));
+            </script>
+
+
+
+        </div>
+
+        </div>
+
+                <div id="andromede" class="galerie">
+            <h1>galaxie andromede</h1>
+
+            <script>
+              fetch('galerie.json')
+                .then(response => response.json())
+                .then(data => {
+                  const galerie = data["andromede"];
+                  const container = document.getElementById("andromede");
 
                   galerie.forEach(item => {
                     const link = document.createElement("a");

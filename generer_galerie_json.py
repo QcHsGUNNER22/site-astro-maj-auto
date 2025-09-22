@@ -4,13 +4,15 @@ import json
 base_path = "PHOTO-SITE-ASTRO"
 galeries = {
     "aurore": [],
-    "CIEL PROFOND": [],
+    "m51": [],
     "gab": [],
     "LUNE": [],
     "PLANETES": [],
     "SOLEIL": [],
     "eclipse solaire": [],
     "drone": [],
+    "galaxie du tourbillion": [],
+    "andromede": [],
 }
 
 for galerie in galeries:
