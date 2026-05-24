@@ -85,7 +85,7 @@
         </div>
 
                 <div id="galerie-m51" class="galerie">
-            <h1>galaxie du tourbillion</h1>
+            <h1>M-51/galaxie du tourbillion</h1>
 
             <script>
               fetch('galerie.json')
@@ -111,15 +111,43 @@
                 })
                 .catch(error => console.error("Erreur de chargement des images :", error));
             </script>
+        </div>  
+
+        <div id="m 101" class="galerie">
+                    <h1>M-101/galaxie du moulinet</h1>
+
+                    <script>
+                    fetch('galerie.json')
+                        .then(response => response.json())
+                        .then(data => {
+                        const galerie = data["m 101"];
+                        const container = document.getElementById("m 101");
+
+                        galerie.forEach(item => {
+                            const link = document.createElement("a");
+                            link.href = item.src;
+                            link.setAttribute("data-lightbox", "ciel-profpnd");
+                            link.setAttribute("data-title", item.title);
+
+                            const img = document.createElement("img");
+                            img.src = item.src;
+                            img.alt = item.title;
+                            img.loading = "lazy";
+
+                            link.appendChild(img);
+                            container.appendChild(link);
+                        });
+                        })
+                        .catch(error => console.error("Erreur de chargement des images :", error));
+                    </script>
 
 
-
-        </div>
+        
 
         </div>
 
                 <div id="andromede" class="galerie">
-            <h1>galaxie andromede</h1>
+            <h1>M31/galaxie andromede</h1>
 
             <script>
               fetch('galerie.json')

@@ -13,6 +13,7 @@ galeries = {
     "drone": [],
     "galaxie du tourbillion": [],
     "andromede": [],
+    "m 101": [],
 }
 
 for galerie in galeries:
